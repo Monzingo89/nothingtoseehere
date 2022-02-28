@@ -1,0 +1,47 @@
+<template>
+  <nav class="text-2xl bg-black flex flex-row justify-center align-middle">
+    <NavButton
+      v-for="i in menu"
+      :key="i.name"
+      :title="i.name"
+      :url="i.url"
+      :class="{ active: path === i.url }"
+    />
+  </nav>
+</template>
+
+<script lang="ts">
+import { defineComponent, computed } from 'vue';
+import { useRoute } from 'vue-router';
+import NavButton from '@/components/NavButton.vue';
+
+export default defineComponent({
+  components: { NavButton },
+  setup() {
+    const route = useRoute();
+    const path = computed(() => route.path);
+
+    const menu = [
+      { name: 'HOME', url: '/' },
+      { name: 'RENT YOUR PROPERTY', url: '/rentals' },
+    ];
+
+    return {
+      menu,
+      path,
+    };
+  },
+});
+</script>
+
+<style scoped>
+.active {
+  @apply bg-transparent text-white;
+}
+
+.more {
+  @apply px-10 py-3 text-white
+  hover:bg-transparent hover:text-white;
+  outline: none;
+}
+</style>
