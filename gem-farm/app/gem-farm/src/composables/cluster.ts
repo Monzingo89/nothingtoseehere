@@ -7,7 +7,7 @@ export enum Cluster {
 }
 
 const clusterURLMapping = {
-  mainnet: process.env.VUE_APP_MAINNET_URL || 'https://ssc-dao.genesysgo.net/',
+  mainnet: process.env.VUE_APP_MAINNET_URL || 'https://nameless-sparkling-sun.solana-mainnet.quiknode.pro/b5da5a460434bab9f547fe694ff420106d348713/',
   devnet: process.env.VUE_APP_DEVNET_URL || 'https://api.devnet.solana.com',
 };
 
