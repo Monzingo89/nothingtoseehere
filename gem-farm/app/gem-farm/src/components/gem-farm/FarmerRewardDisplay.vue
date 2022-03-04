@@ -1,7 +1,7 @@
 <template>
   <div class="nes-container with-title">
     <p class="title">{{ title }}</p>
-    <div class="text-4xl mb-2 text-black">TOTAL ACCURED $RENT: {{ reward.accruedReward * 0.000001 }}</div>
+    <div class="text-4xl mb-2 text-black">TOTAL ACCRUED $RENT: {{ reward.accruedReward * 0.000001 }}</div>
   </div>
 </template>
 

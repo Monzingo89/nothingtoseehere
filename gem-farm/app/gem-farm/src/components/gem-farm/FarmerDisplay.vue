@@ -5,8 +5,8 @@
     <div class="text-2xl mb-4 text-black">User Properties Rented: {{ farmerAcc.gemsStaked }}</div>
     <div class="text-2xl mb-4 text-black">Handsome: True</div>
 
-    <div class="flex mb-5">
-      <div class="flex-1 mr-5">
+    <div class="mb-5">
+      <div class="flex-1 mr-5 flex-wrap">
         <FarmerRewardDisplay
           :key="farmerAcc.rewardA"
           :farmReward="farmAcc.rewardA"
