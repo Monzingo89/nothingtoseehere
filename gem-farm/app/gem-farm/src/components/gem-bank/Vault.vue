@@ -116,7 +116,6 @@ export default defineComponent({
               return (nft.onchainMetadata as any).data.symbol === 'GENTHOME';
           });
         }
-       
         desiredWalletNFTs.value = [...currentWalletNFTs.value];
       }
     };
@@ -139,7 +138,6 @@ export default defineComponent({
           mints,
           getConnection()
         );
-         
         desiredVaultNFTs.value = [...currentVaultNFTs.value];
         console.log(
           `populated a total of ${currentVaultNFTs.value.length} vault NFTs`
