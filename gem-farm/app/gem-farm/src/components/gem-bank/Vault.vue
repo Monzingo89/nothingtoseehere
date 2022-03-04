@@ -111,12 +111,9 @@ export default defineComponent({
           getWallet()!.publicKey!,
           getConnection()
         );
-
         if(currentWalletNFTs.value && currentWalletNFTs.value.length > 0){
             currentWalletNFTs.value = currentWalletNFTs.value.filter((nft) => {
-            if(nft.externalMetadata instanceof Object){
-              return (nft.externalMetadata as any).symbol === 'GENTHOME';
-            }
+              return (nft.onchainMetadata as any).data.symbol === 'GENTHOME';
           });
         }
        
@@ -142,6 +139,7 @@ export default defineComponent({
           mints,
           getConnection()
         );
+         
         desiredVaultNFTs.value = [...currentVaultNFTs.value];
         console.log(
           `populated a total of ${currentVaultNFTs.value.length} vault NFTs`
