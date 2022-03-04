@@ -111,6 +111,11 @@ export default defineComponent({
           getWallet()!.publicKey!,
           getConnection()
         );
+        if(currentWalletNFTs.value && currentWalletNFTs.value.length > 0){
+            currentWalletNFTs.value = currentWalletNFTs.value.filter((nft) => {
+              return (nft.onchainMetadata as any).data.symbol === 'GENTHOME';
+          });
+        }
         desiredWalletNFTs.value = [...currentWalletNFTs.value];
       }
     };
